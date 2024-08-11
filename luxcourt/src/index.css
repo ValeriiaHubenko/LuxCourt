@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Cambay", sans-serif;
+  src: url("/src/fonts/Cambay/Cambay-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Cambay", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  src: url("/src/fonts/Cambay/Cambay-Bold.ttf") format("ttf");
+}
+
+:root {
+  --type-title: "Cambay", sans-serif;
+  --type-body: "Cambay", sans-serif;
+
+  color-scheme: light dark;
+  color: hwb(0 0% 100% / 0.8);
+  background-color: #faf9f9;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}

@@ -1,0 +1,172 @@
+@import "/src/styles/styles.scss";
+
+body {
+  overflow-y: scroll;
+}
+// Spacing for preventing overlap of the fixed positioned
+// header
+
+// Introducs scss variable for height if the header
+// Keep it in relative units
+$top-offset: 4.5rem;
+
+// Add extra padding and margings to all content sections
+// that are now first childs of the main
+main > section {
+  padding: $top-offset 0 0;
+  margin: -$top-offset 0 0;
+
+  // Exclude from these section for the home with the fullscreen imagery,
+  // which happened to be the first of type in the current version of markup
+  &:first-of-type
+  {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.bg-image {
+  position: relative;
+  background: url("src/images/richard-sagredo-Fp_V3HLbCLc-unsplash.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  text-align: left;
+  background-attachment: fixed;
+}
+
+.bgimage {
+  position: relative;
+  background: url("/src/images/prasha.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  text-align: left;
+  overflow: hidden;
+  margin-top: 4rem;
+}
+
+.herotext {
+  // background: rgba(111, 165, 107, 0.785);
+  width: 50%;
+  padding: 20px;
+  z-index: 2;
+  position: absolute;
+  top: 55%;
+}
+
+.btn-style {
+  display: inline-block;
+  border-radius: 80px;
+}
+
+.custom-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+}
+
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.modal-dialog {
+  display: flex;
+  align-items: center;
+}
+
+.icon-link {
+  text-decoration: none;
+}
+
+.icon-link:hover {
+  color: rgb(25, 135, 84);
+  text-decoration: underline;
+  opacity: 0.7;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+//Burger menu button
+.navbar-toggler {
+  border: none !important;
+  color: #060607 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  border: 1px solid rgb(25, 135, 84) !important;
+  color: rgb(25, 135, 84) !important;
+}
+
+//images at program cards
+.img-thumbnail {
+  border: none;
+}
+
+//card glass effect
+.card.glass-effect {
+  background: #96c79e33; /* Slightly transparent white background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.128); /* Light border */
+  border-radius: 15px; /* Rounded corners */
+}
+
+.card {
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+}
+
+//Button see all for blog
+.see-all:hover {
+  text-decoration: underline;
+}
+
+.link:hover .arrow-icon {
+  stroke: rgb(25, 135, 84);
+}
+
+/* Example CSS to ensure only the expanded card changes */
+.expanded-card {
+  height: auto;
+}
+
+//Program cards expanding
+// .card-details {
+//   transition: max-height 2s ease;
+//   overflow: hidden;
+//   max-height: 1400px;
+// }
+
+/* Paddings to each section to create an offset */
+.component-container {
+  scroll-padding-top: 8rem;
+}
+
+section {
+  padding-top: 80px; /* Offset for navbar */
+  margin-top: -80px; /* Negative margin to counter padding */
+}
