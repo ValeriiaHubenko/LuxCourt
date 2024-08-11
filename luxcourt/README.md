@@ -1,4 +1,4 @@
-# LuxCourt Tennis Club
+# LuxCourt Tennis Club 🎾
 
 Welcome to the LuxCourt Tennis Club! This project aims to create an online platform for tennis enthusiasts to connect, book courts, and participate in tournaments.
 
